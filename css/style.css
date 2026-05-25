@@ -340,7 +340,7 @@ ol {
 
 /* --- Hero --- */
 .hero {
-    min-height: 75vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;

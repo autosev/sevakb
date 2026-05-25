@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* --- Intersection Observer for animations --- */
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
+    threshold: 0,
+    rootMargin: "0px 0px 300px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".catalog-item, .service-card").forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateY(20px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    el.style.transition = "opacity 0.4s ease, transform 0.4s ease";
     observer.observe(el);
   });
 
@@ -120,6 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll(".catalog-item, .service-card")
     .forEach((card, i) => {
-      card.style.transitionDelay = `${i * 0.1}s`;
+      card.style.transitionDelay = "0s";
     });
 });
